@@ -2,15 +2,15 @@
   ansible.builtin.get_url:
     url: "{{url_name}}"
     dest: "{{dest_name}}"
-- name: apt update
-  ansible.builtin.apt:
-    update_cache: yes
-  when: ansible_facts['distribution'] == "Ubuntu" 
 - name: Dotnet
   ansible.builtin.yum:
     name: /tmp/packages-microsoft-prod.rpm
     state: present 
   when: ansible_facts['distribution'] == "CentOS"  
+- name: apt update
+  ansible.builtin.apt:
+    update_cache: yes
+  when: ansible_facts['distribution'] == "Ubuntu"   
 - name: Install Dotnet sdk
   ansible.builtin.package:
     name: "{{package_sdk_name}}"
