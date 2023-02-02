@@ -1,7 +1,7 @@
 - name: Get url
   ansible.builtin.get_url:
     url: "{{url_name}}"
-    dest: "{{dest_name}}"
+    dest: "{{dest_name}}"  
 - name: Dotnet
   ansible.builtin.yum:
     name: /tmp/packages-microsoft-prod.rpm
