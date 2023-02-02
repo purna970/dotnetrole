@@ -1,2 +1,2 @@
----
-# vars file for java
+package_sdk_name: dotnet-sdk-7.0
+package_runtime_name: dotnet-runtime-7.0
