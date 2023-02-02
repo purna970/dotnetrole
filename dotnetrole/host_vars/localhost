@@ -1,4 +1,4 @@
-package_sdk_name=dotnet-sdk-6.0
-package_runtime_name=dotnet-runtime-6.0
-url_name=https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-dest_name=/tmp/packages-microsoft-prod.deb
+package_sdk_name: dotnet-sdk-6.0
+package_runtime_name: dotnet-runtime-6.0
+url_name: https://packages.microsoft.com/config/ubuntu/22.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+dest_name: /tmp/packages-microsoft-prod.deb
