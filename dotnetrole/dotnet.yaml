@@ -2,5 +2,5 @@
 - name: Roles
   hosts: all
   become: yes
-  Roles:
-    - Dotnet 
+  roles:
+    - dotnet 
