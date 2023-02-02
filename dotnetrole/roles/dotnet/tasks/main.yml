@@ -1,0 +1,21 @@
+- name: Get url
+  ansible.builtin.get_url:
+    url: "{{url_name}}"
+    dest: "{{dest_name}}"
+- name: apt update
+  ansible.builtin.apt:
+    update_cache: yes
+  when: ansible_facts['distribution'] == "Ubuntu" 
+- name: Dotnet
+  ansible.builtin.yum:
+    name: "{{dest_name}}" 
+    state: present 
+  when: ansible_facts['distribution'] == "CentOS"  
+- name: Install Dotnet sdk
+  ansible.builtin.package:
+    name: "{{package_sdk_name}}"
+    state: present        
+- name: Install dotnet runtime
+  ansible.builtin.package:
+    name:  "{{package_runtime_name}}"
+    state: present             
