@@ -2,6 +2,7 @@
   ansible.builtin.get_url:
     url: "{{url_name}}"
     dest: "{{dest_name}}"  
+  when: ansible_facts['distribution'] == "CentOS"   
 - name: Dotnet
   ansible.builtin.yum:
     name: /tmp/packages-microsoft-prod.rpm
